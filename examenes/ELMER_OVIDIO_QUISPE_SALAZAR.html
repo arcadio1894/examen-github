@@ -56,11 +56,14 @@
                     <h3>Cómo puedo moverme a un commit especifico?</h3>
                     Para volver a un commit especifico, primero encuentre el hash del commit utilizando git log. Luego para ir al commit manteniendo los cambios:
                     $git reset --soft 789abcd.
-                    Tambien se puede utilizar el comando $ git checkout 789abcd, donde se creara una rama para los cambios en adelante. 
+                    Tambien se puede utilizar el comando $ git checkout 789abcd, donde se creara una rama para los cambios en adelante.
                 </li>
                 <li>
                     <h3>Cómo puedo borrar una rama?</h3>
-                    [Pon tu respuesta]
+                    $ git branch -d nombre_rama : muestra si existe algun error, por ejemplo cambios sin fusionar
+                    $ git branch -D nombre-rama : Fuerza la eliminación de la rama
+                    Para un repositorio remoto
+                    $ git push origin --delete nombre_de_la_ram
                 </li>
                 <li>
                     <h3>Cómo puedo borrar un tag?</h3>
