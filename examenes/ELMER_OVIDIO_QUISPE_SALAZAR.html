@@ -68,11 +68,13 @@
                 <li>
                     <h3>Cómo puedo borrar un tag?</h3>
                     Para eliminarlo localmente: $ git tag --delete nombreDeltag ( o git tag -d nombreDelTag)
-                    Para eliminarlo del servidor: $ git push --delete origin nombreDeltag                    
+                    Para eliminarlo del servidor: $ git push --delete origin nombreDeltag
                 </li>
                 <li>
                     <h3>Cómo puedo ver los cambios que estan por enviarse al repositorio?</h3>
-                    [Pon tu respuesta]
+                    $ git diff : Sirve para ver las diferencias con los archivos anteriores de los archivos que no se han añadido al área de ensayo
+                    $ git diff --cached :  mostrará el contenido que se ha añadido al área de ensayo, es decir, los cambios que se incluirán en el historial si se hace commit.
+                    $ git diff --stat
                 </li>
                 <li>
                     <h3>Para que sirve el comando <em>git remote -v?</em></h3>
