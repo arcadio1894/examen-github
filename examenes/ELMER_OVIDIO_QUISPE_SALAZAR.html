@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>.: Examen :.</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img id="logo"
+                src="https://cdn2.iconfinder.com/data/icons/seo-and-website/100/SEO_blog_optimation_article-64.png" />
+            Examen
+            <span id="tagline">Git y Github</span>
+        </div>
+        <div id="post">
+            <h1>Alumn@: Elmer Ovidio Quispe Salazar</h1>
+            <ol>
+                <li>
+                    <h3>Que es un sistema de control de versiones?</h3>
+                    Es un sistema que registra y permite controlar los cambios (de manera independiente o grupal) realizados sobre un archivo o conjunto de archivos a lo largo del tiempo de tal manera que sea posible recuperar versiones especificas más adelante.
+                </li>
+                <li>
+                    <h3>Cual es la diferencia entre git y github?</h3>
+                    Git es el sistema de control de versiones, es un software permite tener un control de cambios sobre el código fuente de una aplicación. Fue inventado por Linus Torwalds, el mismo ingeniero que comenzó el desarrollo del Kernell de Linux.
+                    GitHub es una página que ofrece un grupo de servicios que facilitan el uso de Git, como por ejemplo hosting de proyectos, facilidades de colaboración, reviews de código, perfiles personales, pull requests, issues, etc.
+                </li>
+                <li>
+                    <h3>Cómo creo una rama en git?</h3>
+                    $ git branch nuevaRama : permite crear la rama nuevaRama
+                    $ git checkout -b nuevaRama : permite crear la rama nuevaRama y moverte a la rama nuevaRama
+                </li>
+                <li>
+                    <h3>Cómo clono un repositorio?</h3>
+                    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY (SSH de GitHub)
+                </li>
+                <li>
+                    <h3>Cómo puedo bajar los ultimos cambios de un repositorio?</h3>
+                    Al hacer $ git pull los cambios que hubiese en el servidor remoto se bajarán y fusionarán automáticamente.
+                    Si en lugar de eso, queremos bajar los cambios y fusionarlos de manera manual, podemos usar el comando $ git fetch (lo crea en otra rama), despues podemos realizar un  $ git merge
+                </li>
+                <li>
+                    <h3>Cómo puedo gener un tag?</h3>
+                    $ git tag -a v1.4 -m 'my version 1.4'
+                    La opción -m especifica el mensaje de la etiqueta, el cual es guardado junto con ella.
+                    Si no especificas el mensaje de una etiqueta anotada, Git abrirá el editor de texto para que lo escribas.
+                </li>
+                <li>
+                    <h3>Cómo hago una mezcla de ramas?</h3>
+                    podemos usar uno de los dos siguientes comandos :
+                    $ git rebase o el $ git merge
+                    Se debe tener en cuenta que el rebase unifica las ramas perdiendo el historial de los commit y el merge no.
+                </li>
+                <li>
+                    <h3>Cómo puedo moverme a un commit especifico?</h3>
+                    Para volver a un commit especifico, primero encuentre el hash del commit utilizando git log. Luego para ir al commit manteniendo los cambios:
+                    $git reset --soft 789abcd.
+                    Tambien se puede utilizar el comando $ git checkout 789abcd, donde se creara una rama para los cambios en adelante.
+                </li>
+                <li>
+                    <h3>Cómo puedo borrar una rama?</h3>
+                    $ git branch -d nombre_rama : muestra si existe algun error, por ejemplo cambios sin fusionar
+                    $ git branch -D nombre-rama : Fuerza la eliminación de la rama
+                    Para un repositorio remoto
+                    $ git push origin --delete nombre_de_la_ram
+                </li>
+                <li>
+                    <h3>Cómo puedo borrar un tag?</h3>
+                    Para eliminarlo localmente: $ git tag --delete nombreDeltag ( o git tag -d nombreDelTag)
+                    Para eliminarlo del servidor: $ git push --delete origin nombreDeltag
+                </li>
+                <li>
+                    <h3>Cómo puedo ver los cambios que estan por enviarse al repositorio?</h3>
+                    $ git diff : Sirve para ver las diferencias con los archivos anteriores de los archivos que no se han añadido al área de ensayo
+                    $ git diff --cached :  mostrará el contenido que se ha añadido al área de ensayo, es decir, los cambios que se incluirán en el historial si se hace commit.
+                    $ git diff --stat
+                </li>
+                <li>
+                    <h3>Para que sirve el comando <em>git remote -v?</em></h3>
+                    Para ver los remotos que tienes configurados: git remote,
+                    la opción -v te muestra las URLs que Git ha asociado al nombre y que serán usadas al leer y escribir en ese remoto
+                    por ejemplo:
+                    origin  https://github.com/qselmer/examen-github.git (fetch)
+                    origin  https://github.com/qselmer/examen-github.git (push)
+                </li>
+                <li>
+                    <h3>Cuales son los pasos para conectar git con github?</h3>
+                    Para conectare nuestro proyecto git (local) a guthub (remoto), se debe seguit los siguientes pasos.
+                    $git init      : inicializamos nuestro proyecto en git
+                    $git add .     : para agregar un cambio
+                    $git commit -m "first commit"  : nuestro primer commit
+                    $git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+                    $git push -u origin master
+                </li>
+                <li>
+                    <h3>Cómo puedo crear un alias en git?</h3>
+                    git config –-global alias.ALIAS “FUNCIONES y OPCIONES QUE INCLUIRA EL ALIAS”
+                    git ALIAS
+                    **Ejemplo:
+                    git config –-global alias.s “status -s -b”
+                    git s
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
